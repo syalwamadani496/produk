@@ -31,7 +31,7 @@ export async function ambilDaftarProduk() {
   const cuplikanKuery = await getDocs(kuery);
 
   let hasil = [];
-  cuplikanKuery.forEach((doc) => {
+  cuplikanKuery.forEach((dok) => {
     hasil.push({
       id: dok.id,
       nama: dok.data().nama,
