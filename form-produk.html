@@ -17,7 +17,7 @@
 <body>
   <h1>From Produk</h1>
   .<form class="mb-3">
-        <div class="mb-3">
+    <div class="mb-3">
       <label class="form-label">Nama produk</label>
       <input type="text" class="form-control" id="input-nama">
     </div>
@@ -34,6 +34,24 @@
 
 
   <a href="index.html">stok produk</a>
+
+  <script>
+    type = "module" >
+      import { tambahProduk } Fromm './main.js'
+
+    let tombolTambah = document.getElementById('tombol-Tambah');
+    let elemenNamaproduk = document.getElementById('input-nama');
+    let elemenHarga = document.getElementById('input-harga');
+    let elemenStok = document.getElementById('input-stok');
+    
+    tombolTambah.addEventListener('click', async function (e){
+      e.preventDefault();
+      await tambahProduk(elemenNamaproduk.value, elemenHarga.value, elemenStok.value);
+      window.location.haref='index.html';
+      });
+    
+  </script>
+
 
 </body>
 
